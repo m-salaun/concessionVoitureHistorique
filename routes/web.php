@@ -17,7 +17,7 @@ Route::get('/', [App\Http\Controllers\carController::class, 'index']);
 Route::get('/', [App\Http\Controllers\carController::class, 'index'])->name('home');
 Route::post('/ajouterMarque', [App\Http\Controllers\carController::class, 'add']);
 Route::get('{id}', [App\Http\Controllers\modeleController::class, 'show']);
-Route::get('modele/{id}', [App\Http\Controllers\modeleController::class, 'show'])->name('modele.show');
+Route::get('{id}', [App\Http\Controllers\modeleController::class, 'show'])->name('modele.show');
 Route::post('/', [App\Http\Controllers\modeleController::class, 'add']);
 Route::post('/deleteMarque', [App\Http\Controllers\modeleController::class, 'deleteMarque']);
 Route::post('/deleteModele', [App\Http\Controllers\modeleController::class, 'deleteModele']);
@@ -29,4 +29,5 @@ Route::get('listeVoiture/{id}', [App\Http\Controllers\listeVoitureController::cl
 Route::post('/supprimerVoiture', [App\Http\Controllers\listeVoitureController::class, 'supprimerVoiture']);
 Route::post('/showAddVoiture', [App\Http\Controllers\listeVoitureController::class, 'showAddVoiture']);
 Route::post('/addVoitureStock', [App\Http\Controllers\listeVoitureController::class, 'addVoiture']);
+//Route::get('listeVoiture/{id}', [App\Http\Controllers\modeleController::class, 'show'])->name('voiture.show');
 Auth::routes();

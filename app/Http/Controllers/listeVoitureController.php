@@ -47,11 +47,8 @@ class listeVoitureController extends Controller
             
             $listeVoiture->save();
             $modeles = Modele::where('id', '=', $idModele)->get();
+            //return redirect()->route('voiture.show', ['id' => $idModee]);    
             return view('ajouterVoiture', ['modeles' => $modeles]);
         }
-    }
-    
-    public function modifierVoiture(){
-       
     }
 }
