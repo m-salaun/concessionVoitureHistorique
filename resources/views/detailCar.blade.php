@@ -19,12 +19,6 @@
                 </div>
             </td>
             <td>
-                <div class="form-group">
-                    <label>Prix : </label>
-                    <input type="text" class="form-control" name="prix">
-                </div>
-            </td>
-            <td>
               <br>
                 <button type="submit" class="btn btn-outline-primary" name="idMarque" value="@foreach($cars as $car)
                 {{$car->id}}
@@ -60,7 +54,6 @@
     <tr>
       <th scope="col">id</th>
       <th scope="col">Modele</th>
-      <th scope="col">Prix</th>
       <th scope="col">Nombre en stock</th>
       <th>Ajouter un en stock</th>
       <th>Supprimer un en stock</th>
@@ -73,7 +66,6 @@
     <tr>
       <th scope="row">{{$modele->id}}</th>
       <td>{{$modele->modele}}</td>
-      <td>{{$modele->prix}} €</td>
       <td>{{$modele->nombreEnStock}}</td>
       <td>
         <form action="/incrementerModele" method="POST"> @csrf<button type="submit" class="btn btn-outline-primary"name="id" value="{{$modele->id}}">+</button></form>

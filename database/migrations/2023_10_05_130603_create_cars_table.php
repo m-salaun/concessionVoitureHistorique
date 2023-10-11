@@ -18,7 +18,6 @@ public function up()
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
             $table->string('marque');
-            $table->integer('prix');
             $table->timestamps();
         });
 }

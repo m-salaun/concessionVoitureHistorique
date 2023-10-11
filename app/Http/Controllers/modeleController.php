@@ -21,13 +21,11 @@ class modeleController extends Controller
     }
 
     public function add(){
-        if (!empty($_POST['modele']) && !empty($_POST['prix'])){
+        if (!empty($_POST['modele'])){
             $nomModele = request('modele');
-            $prix = request('prix');
             $idMarque = request('idMarque');
             $modele = new Modele();
             $modele->modele = $nomModele;
-            $modele->prix = $prix;
             $modele->idMarque = $idMarque;
             $modele->nombreEnStock = 0;
             $modele->save();
@@ -83,7 +81,6 @@ class modeleController extends Controller
         $nom = request('nom');
         $modele = Modele::find($idModele);
         $modele->modele = $nom;
-        $modele->prix = $modele->prix; 
         $modele->save();
         $idMarque = $modele->idMarque;
         $car = Car::where('id', '=', $idMarque)->get();

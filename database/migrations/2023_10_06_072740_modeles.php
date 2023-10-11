@@ -15,12 +15,14 @@ class Modeles extends Migration
     {
         Schema::create('modeles', function (Blueprint $table) {
             $table->id();
-            $table->integer('idModele');
             $table->text('modele');
-            $table->text('prix');
+            $table->unsignedBigInteger('idMarque');
+            $table->text('nombreEnStock');
             $table->timestamps();
+
+            $table->foreign('idMarque')->references('id')->on('cars');
         });
-             }
+    }
 
     /**
      * Reverse the migrations.
