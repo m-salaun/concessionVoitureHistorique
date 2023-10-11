@@ -40,11 +40,14 @@
 
 <h1>Base de donnée</h1>
 <p>Pour créer les tables il faut faire un : php artisan migrate</p>
-<p>Se qui va créer les tables dont celle qui nous interesse, "cars" et "modele"</p>
+<p>Se qui va créer les tables dont celle qui nous interesse, "cars", "modele", et "listeVoiture"</p>
 <h2>Cars : </h2>
 <img src="https://raw.githubusercontent.com/m-salaun/concessionHistorique/main/images/tableCars.PNG?token=GHSAT0AAAAAACIUJPZCYY2APCD4NAZLKZLMZJGL6HA">
  <h2>Modele : </h2>
  <img src="https://raw.githubusercontent.com/m-salaun/concessionVoitureHistorique/main/images/tableModele.PNG">
+
+ <h2>ListeVoiture : </h2>
+ <img src="https://raw.githubusercontent.com/m-salaun/concessionVoitureHistorique/main/images/tableListVoiture.PNG">
 <p>Déjà fait mais imoportant à savoir, dans le fichier database changer ->'engine' => null'  PAR  'engine' => 'InnoDB ROW_FORMAT=DYNAMIC',
 et dans le .env modifier les informations pour que ça soit en accord avec votre base de donnée
 </p>
