@@ -21,9 +21,10 @@ Route::get('modele/{id}', [App\Http\Controllers\modeleController::class, 'show']
 Route::post('/', [App\Http\Controllers\modeleController::class, 'add']);
 Route::post('/deleteMarque', [App\Http\Controllers\modeleController::class, 'deleteMarque']);
 Route::post('/deleteModele', [App\Http\Controllers\modeleController::class, 'deleteModele']);
-Route::post('/incrementerModele', [App\Http\Controllers\modeleController::class, 'incrementationModele']);
-Route::post('/decrementationModele', [App\Http\Controllers\modeleController::class, 'decrementationModele']);
+//Route::post('/incrementerModele', [App\Http\Controllers\modeleController::class, 'incrementationModele']);
+//Route::post('/decrementationModele', [App\Http\Controllers\modeleController::class, 'decrementationModele']);
 Route::post('/pageModifierCaracteristiqueModele', [App\Http\Controllers\modeleController::class, 'showModifier']);
 Route::post('/modifierCaracteristiqueModele', [App\Http\Controllers\modeleController::class, 'modifierCaracteristiqueModele']);
+Route::get('listeVoiture/{id}', [App\Http\Controllers\listeVoitureController::class, 'show']);
 
 Auth::routes();

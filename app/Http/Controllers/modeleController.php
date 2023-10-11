@@ -48,7 +48,7 @@ class modeleController extends Controller
         return back();
     }
 
-    public function incrementationModele()
+    /*public function incrementationModele()
     {
         $id = request('id');
         $modele = Modele::find($id);
@@ -64,7 +64,7 @@ class modeleController extends Controller
         $modele->nombreEnStock -= 1;    
         $modele->save();
         return back();
-    }
+    }*/
 
     public function showModifier(){
         $idModele = request('modifier');

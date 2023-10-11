@@ -19,7 +19,6 @@ class Modeles extends Migration
             $table->unsignedBigInteger('idMarque');
             $table->text('nombreEnStock');
             $table->timestamps();
-
             $table->foreign('idMarque')->references('id')->on('cars');
         });
     }

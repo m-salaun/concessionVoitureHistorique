@@ -55,8 +55,6 @@
       <th scope="col">id</th>
       <th scope="col">Modele</th>
       <th scope="col">Nombre en stock</th>
-      <th>Ajouter un en stock</th>
-      <th>Supprimer un en stock</th>
       <th>Modifier ce modele</th>
       <th>Supprimer ce modele</th>
     </tr>
@@ -65,14 +63,8 @@
   @foreach($modeles as $modele)
     <tr>
       <th scope="row">{{$modele->id}}</th>
-      <td>{{$modele->modele}}</td>
+      <td><a href="listeVoiture/{{$modele->id}}">{{$modele->modele}}</a></td>
       <td>{{$modele->nombreEnStock}}</td>
-      <td>
-        <form action="/incrementerModele" method="POST"> @csrf<button type="submit" class="btn btn-outline-primary"name="id" value="{{$modele->id}}">+</button></form>
-      </td>
-      <td>
-        <form action="/decrementationModele" method="POST">@csrf<button type="submit" class="btn btn-outline-primary" name="id" value="{{$modele->id}}">-</button></form>
-      </td>
       <td>
         <form action="/pageModifierCaracteristiqueModele" method="POST">@csrf<button type="submit" class="btn btn-outline-success" name="modifier" value="{{$modele->id}}">Modifier</button></form>
       </td>

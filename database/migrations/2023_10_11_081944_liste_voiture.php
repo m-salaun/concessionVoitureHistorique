@@ -13,7 +13,7 @@ class ListeVoiture extends Migration
      */
     public function up()
     {
-        Schema::create('listVoiture', function (Blueprint $table) {
+        Schema::create('liste_voitures', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_Modele');
             $table->date('date'); 
