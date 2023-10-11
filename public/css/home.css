@@ -1,0 +1,25 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+table {
+    display: flex;
+    border-collapse: collapse;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    padding: 10px;
+}
+
+h1{
+    color : rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: underline;
+}
+
+a{
+    text-decoration:none;
+}
