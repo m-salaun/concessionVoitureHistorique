@@ -44,7 +44,7 @@
 <h2>Cars : </h2>
 <img src="https://raw.githubusercontent.com/m-salaun/concessionHistorique/main/images/tableCars.PNG?token=GHSAT0AAAAAACIUJPZCYY2APCD4NAZLKZLMZJGL6HA">
  <h2>Modele : </h2>
- <img src="https://raw.githubusercontent.com/m-salaun/concessionHistorique/main/images/tableCars.PNG?token=GHSAT0AAAAAACIUJPZCYY2APCD4NAZLKZLMZJGL6HA">
+ <img src="https://raw.githubusercontent.com/m-salaun/concessionHistorique/main/images/tableModele.PNG?token=GHSAT0AAAAAACIUJPZCRH4OLBXRHLGRWDIYZJGMQ6A">
 <p>Déjà fait mais imoportant à savoir, dans le fichier database changer ->'engine' => null'  PAR  'engine' => 'InnoDB ROW_FORMAT=DYNAMIC',
 et dans le .env modifier les informations pour que ça soit en accord avec votre base de donnée
 </p>
