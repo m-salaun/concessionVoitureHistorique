@@ -48,6 +48,8 @@
 <p>Déjà fait mais imoportant à savoir, dans le fichier database changer ->'engine' => null'  PAR  'engine' => 'InnoDB ROW_FORMAT=DYNAMIC',
 et dans le .env modifier les informations pour que ça soit en accord avec votre base de donnée
 </p>
+<h1>Shema de base de la base de donnée</h1>
+<img src="https://raw.githubusercontent.com/m-salaun/concessionVoitureHistorique/main/images/relationTable.PNG">
  
 <h1>Pour acceder à la page :</h1>
 <p>Allez dans le projet et exécutez la commande : php artisan serve 
