@@ -1,4 +1,4 @@
-<h1 style="text-align=center; text-decoration=underline;">Concession voiture en Laravel</h1>
+<h1 style="text-align=center; text-decoration=underline;">Inventaire d'une concession voiture en Laravel</h1>
 <p>Projet réalisé pour apprendre et m'entraîner au plugin Laravel</p>
 <p>Alterance FanLab marine national</p>
 
