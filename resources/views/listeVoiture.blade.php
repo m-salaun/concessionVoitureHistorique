@@ -35,7 +35,7 @@
         
       </td>
       <td>
-      <form action="" method="POST"> @csrf<button type="submit" class="btn btn-outline-primary">+</button></form>
+        <form action="/showAddVoiture" method="POST"> @csrf<button type="submit" class="btn btn-outline-primary" name="idModele" value=" @foreach($modeles as $modele){{$modele->id}}@endforeach">+</button></form>
       </td>
     </tr>
   </table>
@@ -60,7 +60,7 @@
       <td>{{$voiture->date}}</td>
       <td>{{$voiture->kilometre}} km</td>
       <td>
-        {{$voiture->puissances}} chavaux
+        {{$voiture->puissances}} chevaux
       </td>
       <td>
         {{$voiture->energie}}
@@ -72,7 +72,7 @@
         <form action="" method="POST">@csrf<button type="submit" class="btn btn-outline-success">Modifier</button></form>
       </td>
       <td>
-        <form action="" method="POST">@csrf<button type="submit" class="btn btn-outline-danger">Supprimer</button></form>
+        <form action="/supprimerVoiture" method="POST">@csrf<button type="submit" class="btn btn-outline-danger" name="supprimerVoiture" value="{{$voiture->id}}">Supprimer</button></form>
       </td>
     @endforeach
   </tbody>
