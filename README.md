@@ -20,7 +20,13 @@
     <li>Bouton modifier permet de changer le nom du modele</li>
     <li>Bouton suppression d'un modele</li>
 </ul>
-
+<h1>Liste des voitures classe A</h1>
+<img src="https://raw.githubusercontent.com/m-salaun/concessionVoitureHistorique/main/images/PageListeMercedes.PNG">
+<ul>
+    <li>Ajout d'un vehicule</li>
+    <li>Modification des infos</li>
+    <li>Suppression d'un vehicule</li>
+</ul>
 <h1>Laravel utilise le modele MVC</h1>
 <ul>
     <li>Model: récupération des données de l’application et les mettre à jour, ou les stocker via fichier ou bdd.</li>
