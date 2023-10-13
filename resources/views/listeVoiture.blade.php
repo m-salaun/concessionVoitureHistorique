@@ -69,7 +69,7 @@
         {{$voiture->prix}} €
       </td>
       <td>
-        <form action="" method="POST">@csrf<button type="submit" class="btn btn-outline-success">Modifier</button></form>
+        <form action="/showModifierVoiture" method="POST">@csrf<button type="submit" class="btn btn-outline-success" name="idVoitureModification" value="{{$voiture->id}}">Modifier</button></form>
       </td>
       <td>
         <form action="/supprimerVoiture" method="POST">@csrf<button type="submit" class="btn btn-outline-danger" name="supprimerVoiture" value="{{$voiture->id}}">Supprimer</button></form>

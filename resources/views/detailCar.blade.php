@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/detailCar.css">
     <link rel="stylesheet" href="{{asset("css/app.css") }}">
+    <link rel="stylesheet" href="detailCar.css">
 </head>
 <body>
     <div class ="ajout">
@@ -27,6 +27,7 @@
         </form>    
     </table>
     </div>
+
     <div class="titre">
     <table>
         <tr>
@@ -41,7 +42,7 @@
             <td>
                 <form action="/deleteMarque" method="POST">
                 @csrf
-                <button type="submit" class="btn btn-outline-primary"  name="action" value="@foreach($cars as $car)
+                <button type="submit" class="btn btn-outline-primary"  name="idMarque" value="@foreach($cars as $car)
                 {{$car->id}}
                 @endforeach">Enlever cette marque</button>
                 </form>
@@ -69,11 +70,10 @@
         <form action="/pageModifierCaracteristiqueModele" method="POST">@csrf<button type="submit" class="btn btn-outline-success" name="modifier" value="{{$modele->id}}">Modifier</button></form>
       </td>
       <td>
-        <form action="/deleteModele" method="POST">@csrf<button type="submit" class="btn btn-outline-danger" name="modele" value="{{$modele->modele}}">Supprimer</button></form>
+        <form action="/deleteModele" method="POST">@csrf<button type="submit" class="btn btn-outline-danger" name="modele" value="{{$modele->id}}">Supprimer</button></form>
       </td>
     @endforeach
   </tbody>
 </table>
-
 </body>
 </html>

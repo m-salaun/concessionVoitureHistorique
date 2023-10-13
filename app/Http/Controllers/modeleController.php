@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Modele;
 use App\Models\Car;
+use App\Models\ListeVoiture;
 
 
 use Illuminate\Http\Request;
@@ -33,18 +34,24 @@ class modeleController extends Controller
         }
      }
 
-    public function deleteMarque()
-    {
-        $id = request('action');
-        Car::where('id', $id)->delete();
-        Modele::where('idMarque', $id)->delete();
-        return redirect()->route('home');
-    }
+     public function deleteMarque()
+     {
+         $id = request('idMarque');
+         $modeles = Modele::where('idMarque', $id)->get();
+              foreach ($modeles as $modele) {
+             ListeVoiture::where('id_Modele', $modele->id)->delete();
+             Modele::where('id', $modele->id)->delete();
+         }     
+         Car::where('id', $id)->delete();
+         return redirect()->route('home');
+     }
 
     public function deleteModele()
     {
-        $modele = request('modele');
-        Modele::where('modele', $modele)->delete();
+        $id = request('modele');
+        $modele = Modele::find($id);
+        ListeVoiture::where('id_Modele', $id)->delete();
+        Modele::where('id', $id)->delete();
         return back();
     }
 

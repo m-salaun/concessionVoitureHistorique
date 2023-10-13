@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*/  
 
 Route::get('/', [App\Http\Controllers\carController::class, 'index']);
 Route::get('/', [App\Http\Controllers\carController::class, 'index'])->name('home');
@@ -29,5 +29,6 @@ Route::get('listeVoiture/{id}', [App\Http\Controllers\listeVoitureController::cl
 Route::post('/supprimerVoiture', [App\Http\Controllers\listeVoitureController::class, 'supprimerVoiture']);
 Route::post('/showAddVoiture', [App\Http\Controllers\listeVoitureController::class, 'showAddVoiture']);
 Route::post('/addVoitureStock', [App\Http\Controllers\listeVoitureController::class, 'addVoiture']);
+Route::post('/showModifierVoiture', [App\Http\Controllers\listeVoitureController::class, 'showModifierVoiture']);
 //Route::get('listeVoiture/{id}', [App\Http\Controllers\modeleController::class, 'show'])->name('voiture.show');
 Auth::routes();

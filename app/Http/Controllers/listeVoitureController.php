@@ -51,4 +51,10 @@ class listeVoitureController extends Controller
             return view('ajouterVoiture', ['modeles' => $modeles]);
         }
     }
+
+    public function showModifierVoiture(){
+        $idVoiture = request('idVoitureModification');
+        $voitures = ListeVoiture::where('id', $idVoiture);
+        return view('modifierVoiture', ['voitures' => $voitures]);
+    }
 }
